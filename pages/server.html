@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Server</title>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+    </nav>
+    <main class="main">
+        <div class="main main">
+            <h1>Server Page</h1>
+            <p> First run npm install express inside the parent folder <br>
+                Next create a file called server.js in the src folder <br><br>
+                Now we create the server <br>
+                The code for it looks like this:
+            </p>
+    
+            <br><br>
+    
+            <pre>
+            require("./db/connection");
+    
+            const express = require("express");
+            const app = express();
+            const helloRouter = require("[PATH TO ROUTE FILE HERE]")
+    
+            app.use(express.json());
+            app.use(helloRouter)
+            
+            const port = process.env.PORT || 5000;
+    
+            app.listen(port, () => {
+                console.log(`Server listening on port ${port}...`);
+            });
+            </pre>
+            <pre id="warning">
+                NOTE the first line starts the database connection
+                This is very important and is easily missed
+
+                To specify a specific port for example 3000
+                run this is in the terminal
+                export PORT=3000
+            </pre>
+            <br>
+            <h3 id="home">NOW CREATE THE ROUTES FILE</h3>
+
+            <br>
+
+            <div id="home">
+                <a href="./routes.html">routes</a><br>
+                <a href="./controllers.html">controllers</a>
+            </div>
+
+        </div>
+    
+
+    </main>
+    <footer class="footer">copyright rosindubh &copy; 2021</footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>

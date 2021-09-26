@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Connections</title>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+    </nav>
+    <main class="main">
+        <h1>Connection page</h1>
+        <p id="warning">
+            First be sure you have Node.js installed.<br><br>
+            curl fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - <br>
+            sudo apt-get install -y node.js
+        </p>
+        <br>
+        <h2>
+            |  CREATING A MongoDB DATABASE CONNECTION WITH MONGOOSE |
+        </h2>
+        <br>
+        <h2>Basic setup</h2>
+        <p>
+Create a GitHub repository using the name of your project and clone it. <br>
+
+Before you do anything run [npm init -y] <br>
+
+Then make a .gitignore to include /node_modules and .env <br>
+Then make a .env file which contains the MONGO_URI = [connection URI goes here] <br>
+Remember to edit the URI to contain the correct username and password. <br>
+Add a different cluster name if necessary. <br><br>
+
+Next make a src folder <br><br>
+Inside the src folder make a folder named db and create a file called connection.js inside it <br>
+Finally inside the parent folder run the following to install the required libraries. <br><br>
+
+npm i dotenv <br>
+npm i mongoose --save <br><br>
+Now we will write the code, click writing the code below
+
+        </p>
+        <br><br>
+        <a href="./connection2.html" id="home">writing the code</a>
+        <br>
+        <a href="./server.html" id="home">server</a>
+        <a href="./routes.html" id="home">routes</a>
+    </main>
+    <footer class="footer">copyright rosindubh  &copy; 2021</footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>

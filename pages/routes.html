@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Routes</title>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+    </nav>
+    <main class="main">
+        <h1>Routes page</h1>
+        <pre id="warning">  CREATE A FILE CALLED routes.js
+
+
+        </pre>
+        <h3 id="home">THE CODE LOOKS LIKE THIS:</h3><br>
+        <pre>
+        const {Router} = require("express");
+        const helloRouter = Router();
+        const {testGet} = require("[PATH TO CONTROLLERS FILE HERE]")
+
+        helloRouter.get("/testGet", testGet);
+
+        module.exports = helloRouter;
+        </pre>
+        <pre id="warning">
+            Here we have called the router helloRouter
+            You can call it by any name you choose
+
+            We have also created a route to testGet  
+            and imported it. This function doesn't exist
+            yet, we are going to create it now.
+        </pre><br><br>
+        <h3 id="home">NEXT CREATE THE controllers.js FILE</h3>
+        <br><br><br>
+        <a href="./controllers.html" id="home">controllers</a><br>
+        <a href="./server.html" id="home">server</a>
+        <a href="./connection1.html" id="home">connection setup</a>
+        <a href="./connection2.html" id="home">connection code</a>
+    </main>
+    <footer class="footer">copyright rosindubh &copy; 2021</footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>

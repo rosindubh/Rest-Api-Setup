@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Controllers</title>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+    </nav>
+    <main class="main">
+        <h1>Controllers page</h1>
+        <br><br>
+        <p>This is a simple function to be used with Thunder Client<br>
+        or Insomnia to test the Server is receiving a request and giving  <br>
+        a response
+        </p>
+        <br><br><br>
+        <pre>
+            Create a file called controllers.js
+            and add the following code to it
+
+
+        </pre>
+        <pre>
+        exports.testGet = (req, res) => {
+            res.send("Reply from GET");
+        }
+        </pre>
+        <pre id="warning">
+
+
+            If you used PORT 5000 then you should run:
+            http://localhost:5000/testGet
+
+            You can choose any port, for example if you
+            wanted to use port 3000, run the following:
+            export PORT=3000
+
+            There are 65536 port numbers, here is a link to the well known ports
+            on WikipediA, and a link to IANA (Internet Assigned Numbers Authority)
+            who are responsible for  maintaining the official assignments of port 
+            numbers for specific uses.
+
+            <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" id="home" target="_blank">WikipediA</a>
+            <a href="https://www.iana.org/" id="home" target="_blank">IANA</a>
+        </pre>
+    </main>
+    <footer class="footer">copyright rosindubh &copy; 2021</footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
