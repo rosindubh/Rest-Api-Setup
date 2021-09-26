@@ -15,12 +15,17 @@
     </nav>
     <main class="main">
         <h1>Controllers page</h1>
-        <br><br>
+        <br>
+        <pre id="warning">
+            CREATE A FOLDER CALLED controller IN THE src FOLDER
+            CREATE A FILE CALLED index.js IN THE controller folder
+            ADD THE FOLLOWING CODE
+        </pre>
         <p>This is a simple function to be used with Thunder Client<br>
         or Insomnia to test the Server is receiving a request and giving  <br>
         a response
         </p>
-        <br><br><br>
+        <br>
         <pre>
             Create a file called controllers.js
             and add the following code to it
@@ -34,7 +39,14 @@
         </pre>
         <pre id="warning">
 
+            NOW RUN npm i nodemon and add this line to package.json
+            "dev" : "nodemon src/server.js"
+            after the test line called test 
+            DON'T FORGET THE COMMA AT THE END OF test OR YOU WILL GET AN ERROR
 
+            You can now test by first running 
+            npm run dev
+            in the terminal
             If you used PORT 5000 then you should run:
             http://localhost:5000/testGet
 
