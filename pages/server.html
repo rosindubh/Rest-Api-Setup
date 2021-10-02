@@ -29,10 +29,10 @@
     
             const express = require("express");
             const app = express();
-            const helloRouter = require("[PATH TO ROUTE FILE HERE]")
+            const router = require("[PATH TO ROUTE FILE HERE]")
     
             app.use(express.json());
-            app.use(helloRouter)
+            app.use(router)
             
             const port = process.env.PORT || 5000;
     

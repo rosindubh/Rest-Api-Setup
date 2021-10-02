@@ -24,15 +24,15 @@
         <h3 id="home">THE CODE LOOKS LIKE THIS:</h3><br>
         <pre>
         const {Router} = require("express");
-        const helloRouter = Router();
+        const router = Router();
         const {testGet} = require("[PATH TO CONTROLLERS FILE HERE]")
 
-        helloRouter.get("/testGet", testGet);
+        router.get("/testGet", testGet);
 
-        module.exports = helloRouter;
+        module.exports = router;
         </pre>
         <pre id="warning">
-            Here we have called the router helloRouter
+            Here we have called the router router
             You can call it by any name you choose
 
             We have also created a route to testGet  
