@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Model</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+        <a href="./controllers.html" id="home">controllers</a>
+        <a href="./server.html" id="home">server</a>
+        <a href="./connection1.html" id="home">connection setup</a>
+        <a href="./connection2.html" id="home">connection code</a>
+    </nav>
+    <main class="main">
+        <h1>Model page</h1>
+        <pre id="warning">  
+            WE NOW NEED TO CREATE A MODEL FOR ADDING USERS TO THE DATABASE
+            INSIDE THE FILE NAMED models CREATE A FILE CALLED index.js
+
+
+        </pre>
+        <h3 id="home">THE CODE LOOKS LIKE THIS:</h3><br>
+        <pre>
+            const mongoose = require("mongoose");
+
+            const userSchema = mongoose.Schema({
+                name: {
+                    type: String,
+                    required: true,
+                    unique: true,
+                },
+                email: {
+                    type: String,
+                    required: true,
+                    unique: true,
+                },
+                password: {
+                    type: String,
+                    required: true
+                }
+            })
+            
+            const User = mongoose.model("User", userSchema);
+            
+            module.exports = User;
+
+            <pre>
+                <h3 id="home">THIS IS THE SCHEMA FOR A USER IT CONTAINS A NAME AN EMAIL AND A PASSWORD</h3>
+            </pre>
+
+
+    </main>
+    <footer class="footer">copyright rosindubh &copy; 2021</footer>
+
+    <script src="./app.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>
