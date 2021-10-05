@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>POST User</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" id="home">Home</a>
+        <a href="./controllers.html" id="home">controllers</a>
+        <a href="./server.html" id="home">server</a>
+        <a href="./connection1.html" id="home">connection setup</a>
+        <a href="./connection2.html" id="home">connection code</a>
+        <a href="./model.html">Model</a>
+    </nav>
+    <main class="main">
+        <br>
+        <h1>POST User page</h1>
+        <pre id="warning">
+
+
+                IN THE controllers.js FILE ADD THE FOLLOWING
+        </pre>
+        <pre>
+            //POST      /user
+            exports.addUser = async (req, res) => {
+              try {
+                const user = new User(req.body);
+                await user.save();
+                res.status(200).send({ user, message: "User added success"});
+              } catch (error) {
+                res.status(500).send(error);
+              }
+            }
+        </pre>
+        <pre>
+            NOTE THIS IS ONLY A BASIC POST WITH NO ENCRYPTION OR JSW
+        </pre>
+        <pre>
+            Now we can add a PUT connection which can update the user details
+        </pre>
+        <a id="home" href="./putUser.html">PUT User</a>
+
+
+  
+
+
+    </main>
+    <footer class="footer">copyright rosindubh &copy; 2021</footer>
+
+
+</body>
+</html>
