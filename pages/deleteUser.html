@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>PUT User</title>
+    <title>DELETE User</title>
 </head>
 <body>
     <nav class="navbar">
@@ -16,36 +16,31 @@
         <a href="./connection2.html" id="home">connection code</a>
         <a href="./model.html">Model</a>
         <a href="./postUser.html" id="home">POST User</a>
+        <a href="./putUser.html" id="home">PUT User</a>
+        <a href="./listUsers.html" id="home">listUsers</a>
     </nav>
     <main class="main">
         <br>
-        <h1>PUT User page</h1> <br>
+        <h1>DELETE User page</h1> <br>
         <pre id="warning">
             IN THE controllers.js FILE ADD THE FOLLOWING CODE
             AND TEST USING THIS IN THUNDER CLIENT
-            http://localhost:5000/updateUser
+            http://localhost:5000/deleteUser/[email address]
         </pre>
 
         <pre>
-            ///PUT       /user/update
-            exports.updateUser = async (req, res) => {
+            //DELETE      /user/[user email]
+            exports.deleteUser = async (req, res) => {
               try {
-                await User.updateOne(
-                  { email: req.body.email},
-                  // {$set: {[req.body.key]: req.body.update } }  //THIS DIDN'T WORK???? ASK ANDY
-                  {$set: { password: req.body.password} }
-                );
-                res.status(200).send({ message: "Successfully Updated..."})
+                const email = req.params.email //THIS LINE MISSING IN VIDEO???
+                await User.deleteOne({email: req.params.email});
+                res.status(200).send({message: `${email} deleted`})
               } catch (error) {
                 res.status(500).send(error);
               }
             }
+          
         </pre>
-
-        <br><br>
-        <h3 id="home">NOW WE WILL ADD THE listUsers CONTROLLER</h3>
-        <br><br>
-        <a href="./listUsers.html" id="home">listUsers</a>
 
     </main>
     <footer class="footer">copyright rosindubh &copy; 2021</footer>
