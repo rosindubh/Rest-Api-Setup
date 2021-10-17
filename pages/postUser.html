@@ -26,6 +26,8 @@
         </pre>
         <pre>
             //POST      /user
+            const User = require('../models');
+
             exports.addUser = async (req, res) => {
               try {
                 const user = new User(req.body);
